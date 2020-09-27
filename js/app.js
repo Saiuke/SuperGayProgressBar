@@ -5,11 +5,7 @@ new Vue({
 		barTimer: null,
 	},
 	computed:{
-		progressBar(){
-			return {
-				width: this.barWidth + '%'
-			}
-		}		
+				
 	},
 	watch:{
 		barWidth(velho, novo){
@@ -25,6 +21,11 @@ new Vue({
 				this.barTimer = setInterval(() => {
 					this.barWidth++
 				}, 50)
+			}
+		},
+		progressBar(){
+			return {
+				width: this.barWidth + '%'
 			}
 		}
 	}
